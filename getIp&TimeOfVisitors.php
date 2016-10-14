@@ -1,4 +1,5 @@
 <?php 
+//try to get a start!
 date_default_timezone_set("PRC");
 
 function ip() { 
