@@ -26,4 +26,17 @@ $str=$ip." ".$time;
 $l=fopen("$times.txt","a+"); 
 fwrite($l,$str. "\n"); 
 fclose($l); 
+
+// 利用新浪接口根据ip查询所在区域信息 
+/* $res0 = file_get_contents("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip=$ip"); 
+$res0 = json_decode($res0); 
+print_r($res0); 
+echo "<br />"; */ 
+
+// 利用淘宝接口根据ip查询所在区域信息 
+$res1 = file_get_contents("http://ip.taobao.com/service/getIpInfo.php?ip=$ip"); 
+$res1 = json_decode($res1); 
+/* print_r($res1); */ 
+
+error_reporting(0);
 ?>
