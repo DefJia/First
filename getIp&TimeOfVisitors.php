@@ -1,6 +1,6 @@
 <?php 
 //try to get a start!
-date_default_timezone_set("PRC");
+date_default_timezone_set("PRC");//make sure the date() match the timezone
 
 function ip() { 
 	if(getenv('HTTP_CLIENT_IP') && strcasecmp(getenv('HTTP_CLIENT_IP'), 'unknown')) { 
